@@ -1,4 +1,5 @@
 /*
+Problem : If the mean of the following distribution is 24, find the value of ’a’.
 From the given theory equations, we obtained the value of a as 10.
 Verifying the value of a from the below 'C' programme !!
 */
