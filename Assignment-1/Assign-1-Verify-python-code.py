@@ -1,4 +1,5 @@
 """
+Problem : If the mean of the following distribution is 24, find the value of ’a’.
 Given data,
     frequencies = [7, a, 8, 10, 5]
     mid-values  = [5,15,25, 35,45]
