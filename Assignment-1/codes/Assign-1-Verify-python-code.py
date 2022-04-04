@@ -2,17 +2,33 @@
 Given data,
     frequencies = [7, a, 8, 10, 5]
     mid-values  = [5,15,25, 35,45]
-Therefore the value of fi*xi is [35, 15a, 200, 350, 225]
-        and the sum of all fi*xi is 810 + 15a.
-And the sum of all frequencies are 30 + a.
 The given value of mean is 24.
-Therefore, the required equation is 24 = (810 + 15a)/(30 + a)
 """
 
+# Importing the modules
+import numpy as np
+import math
 from sympy import Eq, Symbol, solve
 
-a = Symbol('a')
-eqn = Eq(24, (810 + 15*a)/(30 + a))
+# Making a matrix for frequencies(f) and mid-values(x) WITHOUT the value involving variable 'a'
+f_without_a = np.array([7, 8, 10, 5])
+x_without_a = np.array([5, 25, 35, 45])
 
-# prints the required value of a.
-print(solve(eqn))
+# Making a matrix for frequencies(f) and mid-values(x) WITH the value involving variable 'a'
+f_with_a = np.array(["a"])
+x_with_a = np.array([15])
+
+# Making 1 vector matrix with required sizes
+size_4_1 = np.array([1, 1, 1, 1])
+size_1_1 = np.array([1])
+
+# Substituting in the equation, mean = [f.x(without a) + f.x(with a)]/[f.1(without a) + f.1(with a)]
+fx_without_a = np.dot(f_without_a, x_without_a)
+f1_without_a = np.dot(f_without_a, size_4_1)
+
+# Constructing the equation
+a = Symbol('a')
+eqn = Eq((fx_without_a + 15*a)/(f1_without_a + a), 24)
+
+# Obtaining and verifying the answer
+print("The value of a is",solve(eqn))
