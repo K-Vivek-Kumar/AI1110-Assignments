@@ -1,0 +1,107 @@
+\documentclass[12pt, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\title{High School Assignment}
+\author{K Vivek Kumar}
+\date{28 March 2022}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\setlength{\columnwidth}{1cm}
+\begin{document}
+	\maketitle
+	\section{2018-ICSE-10th board-Problem : 8(b)}
+	\textbf{\underline{Problem:} }If the mean of the following distribution is 24, find the value of 'a'.
+	\begin{table}[htb]
+		\centering
+		\resizebox{\columnwidth}{!}{
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Marks & 0-10 & 10-20 & 20-30 & 30-40 & 40-50\\
+				\hline
+				Number of students & 7 & a & 8 & 10 & 5\\
+				\hline
+			\end{tabular}
+		}
+	\end{table}\\
+	\textbf{\underline{Solution:} }Given, the mean of the following distribution is, m = 24.\\
+	We know that,
+	\begin{equation} \label{eqn}
+		mean(m) = \frac{\sum f_ix_i}{\sum f_i}
+	\end{equation}
+\text{This can also be written as}\\
+\begin{equation} \label{eqn}
+	mean(m) = \frac{\vec{f}^T\vec{x}}{\vec{1}^T\vec{f}}
+\end{equation}
+	\text{ As per the question,}
+	\begin{table}[htb]
+		\centering
+		\resizebox{\columnwidth}{!}{
+			\begin{tabular}{|c|c|c|}
+				\hline
+				Intervals & Frequency (f_i) & Mid-Value (x_i)\\
+				\hline
+				0-10 & 7 & 5 \\
+				\hline
+				10-20 & a & 15 \\
+				\hline
+				20-30 & 8 & 25\\
+				\hline
+				30-40 & 10 & 35\\
+				\hline
+				40-50 & 5 & 45\\
+				\hline
+			\end{tabular}\\
+		}
+	\end{table}\\
+Therefore, from the above table we can deduce the following vectors,\\
+	\begin{equation*}
+		\vec{f} = \begin{bmatrix} 7\\a\\8\\10\\5\\
+		\end{bmatrix}; 
+	\vec{x} = \begin{bmatrix} 	5\\15\\25\\35\\45\\
+	\end{bmatrix}
+	\end{equation*}
+To find the value of 'a', we can simplify the equation (2),
+\begin{equation*}
+		mean(m) = \frac{\vec{f}^T\vec{x}\text{(without 'a')} + \vec{f}^T\vec{x}\text{(with 'a')}}{\vec{1}^T\vec{f}\text{(without 'a')} + \vec{1}^T\vec{f}\text{(with 'a')}}
+\end{equation*}
+Taking the dot product,\\
+\begin{equation*}
+	\vec{f}^T\vec{x}\text{(without 'a')} = \begin{bmatrix} 7\\8\\10\\5\\
+		\end{bmatrix}.\begin{bmatrix} 	5\\25\\35\\45\\
+		\end{bmatrix} = [35 + 200 + 350 + 225].
+\end{equation*}
+\begin{equation*}
+	\vec{f}^T\vec{x}\text{(with 'a')} = \begin{bmatrix} a\\
+	\end{bmatrix}.\begin{bmatrix} 	15\\
+	\end{bmatrix} = [15a].
+\end{equation*}
+\begin{equation*}
+	\vec{1}^T\vec{x}\text{(without 'a')} = \begin{bmatrix} 1\\1\\1\\1\\
+	\end{bmatrix}.\begin{bmatrix} 	7\\8\\10\\5\\
+	\end{bmatrix} = [7 + 8 + 10 + 5].
+\end{equation*}
+\begin{equation*}
+	\vec{1}^T\vec{x}\text{(with 'a')} = \begin{bmatrix} 1\\
+	\end{bmatrix}.\begin{bmatrix} 	a\\
+	\end{bmatrix} = [a].
+\end{equation*}
+On substituting the following above values in the equation, we get
+\begin{equation*}
+	mean(m) = \frac{[35 + 200 + 350 + 225] + [15a]}{[7 + 8 + 10 + 5] + [a]}
+\end{equation*}
+\begin{equation*}
+	mean(m) = \frac{810 + 15a}{30 + a}
+\end{equation*}
+	\begin{equation*}
+		24(30 + a) = 810 + 15a
+	\end{equation*}
+	\begin{equation*}
+		720 + 24a = 810 + 15a
+	\end{equation*}
+	\begin{equation*}
+		9a = 90
+	\end{equation*}
+	\begin{equation*}
+		a = 10
+	\end{equation*}
+	Therefore, the required value(a) is 10.
+\end{document}
