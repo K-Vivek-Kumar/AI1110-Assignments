@@ -1,3 +1,7 @@
+"""
+Finding the inverse of the function, f(x) = sqrt(2x-3)
+"""
+
 # importing the important libraries
 import numpy as np
 import matplotlib.pyplot as plt
