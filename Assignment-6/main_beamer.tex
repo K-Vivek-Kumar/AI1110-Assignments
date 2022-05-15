@@ -1,0 +1,181 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+% Theme choice:
+\usetheme{CambridgeUS}
+% Title page details: 
+\title{Assignment-6} 
+\author{K Vivek Kumar - CS21BTECH11026}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Class-12-Probability-Exercise-13.4}
+TABLE of CONTENTS
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Problem 1}
+State which of the following are not the probability distributions of a random variable. Give reasons for your answer.
+\begin{itemize}
+    \item
+    \begin{tabular}{|c|c|c|c|}
+\hline
+    X & 0 & 1 & 2 \\ 
+\hline
+    P(X) & 0.4 & 0.4 & 0.2\\ 
+\hline
+\end{tabular}
+
+    \item \begin{tabular}{|c|c|c|c|c|c|}
+\hline
+    X & 0 & 1 & 2 & 3 & 4 \\ 
+\hline
+    P(X) & 0.1 & 0.5 & 0.2 & -0.1 & 0.3\\ 
+\hline
+\end{tabular}
+\item \begin{tabular}{|c|c|c|c|}
+\hline
+    Y & -1 & 0 & 1 \\ 
+\hline
+    P(Y) & 0.6 & 0.1 & 0.2\\ 
+\hline
+\end{tabular}
+\item \begin{tabular}{|c|c|c|c|c|c|}
+\hline
+    Z & 3 & 2 & 1 & 0 & -1 \\ 
+\hline
+    P(Z) & 0.3 & 0.2 & 0.4 & 0.1 & 0.05\\ 
+\hline
+\end{tabular}
+    \end{itemize}
+\end{frame}
+
+
+% Blocks frame
+\section{Solution : Properties involved}
+\begin{frame}{Solution}
+We can verify whether a probability distribution is valid for a given random variable by checking two of its properties. The below are the one to be verified in each case for a random variable X.\\
+\begin{block}{Property-1}
+        The value of P(X) should always be positive.
+\begin{align*}
+p_i>0, \text{for $i = {1,2,3,...,n}$}
+\end{align*}
+    \end{block}
+    \begin{block}{Property-2}
+       The sum of all the values of P(X) should always sum upto one.
+\begin{align*}
+\sum^{n}_{i = 1}p_i = 1, \text{for $i = {1,2,3,...,n}$}
+\end{align*}
+    \end{block}
+\end{frame} 
+\section{Solution (i)}
+\begin{frame}{Solution (i)}
+(i) Random variable : X
+\begin{table}
+\centering
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+    X & 0 & 1 & 2 \\ 
+\hline
+    P(X) & 0.4 & 0.4 & 0.2\\ 
+\hline
+\end{tabular}\\
+\end{table}
+\par For the random variable X, we can observe that all the $p_i$ are positive, and also
+    \begin{align}
+    p_1 + p_2 + p_3 &= 0.4 + 0.4 + 0.2\\ 
+   p_1 + p_2 + p_3 &= 1
+    \end{align}
+    $\therefore$ This probability distribution of the random variable X is a valid one.
+\end{frame} 
+\section{Solution (ii)}
+\begin{frame}{Solution (ii)}
+(ii) Random variable : X
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+    X & 0 & 1 & 2 & 3 & 4 \\ 
+\hline
+    P(X) & 0.1 & 0.5 & 0.2 & -0.1 & 0.3\\ 
+\hline
+\end{tabular}\\
+\end{table}
+\par For this probability distribution we can observe that the value of $p_4$ i.e., -0.1 is a negative value, which violates the first property of a probability distribution.\\
+	      $\therefore$ This probability distribution of the random variable X is \textbf{NOT} a valid one.
+\end{frame}
+\section{Solution (iii)}
+\begin{frame}{Solution (iii)}
+(iii) Random variable : Y
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+    Y & -1 & 0 & 1 \\ 
+\hline
+    P(Y) & 0.6 & 0.1 & 0.2\\ 
+\hline
+\end{tabular}\\
+\end{table}
+\par For the random variable Y, we can observe that all the $p_i$ are positive, and also
+	      \begin{align}
+	      p_1 + p_2 + p_3 &= 0.6 + 0.1 + 0.2\\
+	       p_1 + p_2 + p_3 &= 0.9 < 1
+	      \end{align}
+	      Though the property 1 is valid here, but the property 2 isn't a valid one. The sum is not coming out to be 1.\\
+	      $\therefore$ This probability distribution of the random variable Y is \textbf{NOT} a valid one.
+\end{frame}
+\section{Solution (iv)}
+\begin{frame}{Solution (iv)}
+(iv) Random variable : Z
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+    Z & 3 & 2 & 1 & 0 & -1 \\ 
+\hline
+    P(Z) & 0.3 & 0.2 & 0.4 & 0.1 & 0.05\\ 
+\hline
+\end{tabular}\\
+\end{table}
+\par For the random variable Z, we can observe that all the $p_i$ are positive, and also
+ \begin{align}
+ \begin{split}
+p_1 + p_2 + p_3 + p_4 + p_5 ={}& 0.3 + 0.2 + 0.4 \\
+                               &+ 0.1 + 0.05
+ \end{split}\\
+p_1 + p_2 + p_3 + p_4 + p_5 ={}& 1.05 > 1
+ \end{align}
+	      Though the property 1 is valid here, but the property 2 isn't a valid one. The sum is not coming out to be 1.\\
+	      $\therefore$ This probability distribution of the random variable Z is \textbf{NOT} a valid one.
+\end{frame}
+\end{document}
