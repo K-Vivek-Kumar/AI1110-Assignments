@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+% Theme choice:
+\usetheme{CambridgeUS}
+% Title page details: 
+\title{Assignment-6} 
+\author{K Vivek Kumar - CS21BTECH11026}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Papoulis-Exercise-5}
+TABLE of CONTENTS
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Problem 5-7}
+We place at random 200 points in the interval (0, 100). The distance from 0 to the first random point is a random variable $z$. Find $F_{z}(z)$.
+	\begin{enumerate}
+	\item exactly, and 
+	\item using the Poisson approximation. 
+	\end{enumerate}
+\end{frame}
+
+
+% Blocks frame
+\section{Solution : Theorems involved - 1}
+\begin{frame}{Solution}
+The following theorem would be involved in the problem.\\
+\begin{block}{FUNDAMENTAL THEOREM:}
+\begin{align}
+p_{n}(k)&=\text{P($A$ occurs $k$ times in any order)} \\
+        &= \begin{pmatrix}
+n\\
+k
+\end{pmatrix}p^{k}q^{n-k}
+\end{align}
+    \end{block}
+\end{frame} 
+\section{Solution : Theorems involved - 2}
+\begin{frame}{Solution}
+The following theorem would be involved in the problem.\\
+\begin{block}{POISSON THEOREM:} If 
+\begin{align*}
+n \to \infty; && p \to 0; && \text{such that } np \to \lambda
+\end{align*}
+then for $k=0,1,2..$,
+\begin{align}
+\frac{n!}{k!(n-k)!}p^{k}q^{n-k}\xrightarrow[\text{$n\to \infty$}]{} e^{-\lambda}\frac{\lambda^{k}}{k!}
+\end{align}
+    \end{block}
+\end{frame}
+\section{Solution : deductions}
+\begin{frame}{Solution : deductions}
+Clearly, $z' \leq z$ iff the number n$(0,z)$ of the points in the interval $(0,z)$ is atleast one.\\
+	Hence,
+	\begin{align}
+	F_{z}(z) &= \text{P}(z' \leq z) \\
+	         &= \text{P}(\text{n'}(0,z)>0)\\
+	F_{z}(z) &= 1-\text{P}(\text{n'}(0,z)=0)
+	\end{align}
+	The probability p that a particular point is in the interval $(0,z)$ equals $\frac{z}{100}$. With $n=200,k=0$ and $p=\frac{z}{100}$, from the fundamental theorem it gives $\text{P}(\text{n'}(0,z)=0)=(1-p)^{200}$.\\
+\end{frame} 
+\section{Solution (i)}
+\begin{frame}{Solution (i)} Hence from the fundamental theorem, we can conclude that
+\begin{align}
+	F_{z}(z) &= 1-(1-\frac{z}{100})^{200}
+	\end{align}
+
+\end{frame}
+\section{Solution (ii)}
+\begin{frame}{Solution (ii)}
+From the poisson's theorem, it follows that for $z \ll 100$,
+	\begin{align}
+	F_{z}(z) \simeq 1-e^{-2z}
+\end{align}
+\end{frame}
+
+\end{document}

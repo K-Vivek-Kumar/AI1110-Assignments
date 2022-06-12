@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Question}{3}{0}{1}
+\beamer@sectionintoc {2}{Solution : Theorems involved - 1}{4}{0}{2}
+\beamer@sectionintoc {3}{Solution : Theorems involved - 2}{5}{0}{3}
+\beamer@sectionintoc {4}{Solution : deductions}{6}{0}{4}
+\beamer@sectionintoc {5}{Solution (i)}{7}{0}{5}
+\beamer@sectionintoc {6}{Solution (ii)}{8}{0}{6}
