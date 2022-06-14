@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+% Theme choice:
+\usetheme{CambridgeUS}
+% Title page details: 
+\title{Assignment-8} 
+\author{K Vivek Kumar - CS21BTECH11026}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Papoulis-Chapter-10}
+TABLE of CONTENTS
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Problem 10-17}
+Find the power spectrum $S(\omega)$ of a process $x(t)$ if $S(\omega)=0$ for $\lvert\omega\rvert>\pi$ and
+	\begin{align*}
+	E\{x(n+m)x(n)\}=N\delta[\,m]\,
+	\end{align*}
+\end{frame}
+
+
+% Blocks frame
+\section{Solution : Properties involved - 1}
+\begin{frame}{Solution : Properties involved - 1}
+The following property is involved in the problem.\\
+\begin{block}{Property 1:}
+As we know from $T=\dfrac{\pi}{\sigma}$,
+\begin{align}
+	R(mT)=E\{x(nT+mT)x(nT)\}=\begin{cases}
+	I & m=0\\
+	\eta^{2} & m \neq 0
+	\end{cases}
+	\end{align}
+    \end{block}
+\end{frame} 
+\section{Solution : Properties involved - 2}
+\begin{frame}{Solution : Properties involved - 2}
+The following property is involved in the problem.\\
+\begin{block}{Property 2:} \begin{align}
+	R(\tau)=\sum_{n=-\infty}^{\infty}R(nT)\dfrac{\sin(\sigma(\tau-nT))}{\sigma(\tau-nT)}
+	\end{align}
+    \end{block}
+\end{frame}
+\section{Solution - I}
+\begin{frame}{Solution - I}
+Given,
+	\begin{align}
+	E\{x(n+m)x(n)\}=N\delta[\,m]\,
+	\end{align}
+	Therefore, from the property 2, we can deduce the following equation,
+	\begin{align}
+	R(\tau)&=\sum_{m=-\infty}^{\infty}R(mT)\dfrac{\sin(\sigma(\tau-mT))}{\sigma(\tau-mT)}\\
+	       &=\eta^{2} + (I-\eta^{2})\dfrac{\sin \sigma\tau}{\pi\tau}
+	\end{align}
+	\end{frame}
+\section{Solution - II}
+\begin{frame}{Solution - II}
+	Therefore,
+	\begin{align}
+	S(\omega)=2\pi\eta^{2}\delta(\omega)+2\pi(I-\eta^{2})p_{\sigma}(\omega)\label{eqn-1.6}
+	\end{align}
+	As it is said that $S(\omega)=0$ for $|\omega|>\pi$, therefore we can say from the equation \ref{eqn-1.6}, $\eta=0$ and $I=N$. On substituting it in the equation,
+	\begin{align}
+	S(\omega)&=2\pi(0)^{2}\delta(\omega)+2\pi(N-(0)^{2})p_{\sigma}(\omega)\\
+	         &=2\pi N p_{\sigma}(\omega)
+	\end{align}
+	\par$\therefore$ The power spectrum $S(\omega)$ is $2\pi N p_{\sigma}(\omega)$.
+\end{frame}
+
+\end{document}
