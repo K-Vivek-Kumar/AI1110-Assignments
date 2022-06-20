@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+% Theme choice:
+\usetheme{CambridgeUS}
+% Title page details: 
+\title{Assignment-9} 
+\author{K Vivek Kumar - CS21BTECH11026}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Papoulis-Chapter-15}
+TABLE of CONTENTS
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Problem 15-7}
+Show that the sums $s_n = x_1 + x_2 + ... + x_n$ of independent zero mean random variables form a martingale. 
+\end{frame}
+
+\section{Solution : Property involved}
+\begin{frame}{Solution : Property involved}
+The following property would be involved in the problem.\\
+\begin{block}{Property:}
+A random sequence $x_{n}$ is called a martingale if $E\{x_n=0\}$ and 
+\begin{align}
+E\{x_n|x_{n-1},x_{n-2},...,x_1\}=x_{n-1}
+\end{align}
+    \end{block}
+\end{frame}
+
+
+% Blocks frame
+\section{Solution : I}
+\begin{frame}{Solution : I}
+Given,
+	\begin{align}
+	s_n = x_1 + x_2 + ... + x_n
+	\end{align}
+	where, $x_n$ are i.i.d. random variables. We have
+	\begin{align}
+	s_{n+1} = s_n + x_{n+1}
+	\end{align}
+\end{frame} 
+\section{Solution : II}
+\begin{frame}{Solution : II}
+	So from the property we can say that,
+	\begin{align}
+	E\{s_{n+1}|s_{n}\}&=E\{s_{n}+x_{n+1}|s_{n}\}\\
+	&=s_{n}+E\{x_{n+1}\}\\
+	&=s_n
+	\end{align}
+	Hence, $\{s_n\}$ represents a Martingale.
+\end{frame} 
+
+\end{document}
